@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+
+dotenv.config();
 import mongoose from "mongoose";
 import PDFParser from "pdf2json";
 import express from "express";
@@ -6,7 +9,7 @@ import multer from "multer";
 import ResumeAnalysis from "../models/ResumeAnalysis.js";
 const app = express();
 mongoose.connect(
-  "mongodb+srv://Rohan:%40oct123R@cluster0.ria7hc9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  process.env.MONGO_URI
 )
   .then(() =>
     console.log(
