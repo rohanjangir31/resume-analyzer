@@ -21,9 +21,9 @@ const [selectedResume2,
   const [error, setError] = useState("");
   useEffect(() => {
 
-  fetch(
-    "https://resume-analyzer-9300.onrender.com"
-  )
+fetch(
+  "https://resume-analyzer-9300.onrender.com/history"
+)
     .then((res) =>
       res.json()
     )
@@ -54,7 +54,7 @@ formData.append(
 );
 
 const response = await fetch(
-  "https://resume-analyzer-9300.onrender.com",
+  "https://resume-analyzer-9300.onrender.com/analyze",
   {
     method: "POST",
     body: formData,
@@ -67,7 +67,7 @@ const data =
   setFileName(file.name);
   const historyResponse =
   await fetch(
-    "https://resume-analyzer-9300.onrender.com"
+    "https://resume-analyzer-9300.onrender.com/history"
   );
 
 const historyData =
