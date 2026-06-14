@@ -22,7 +22,7 @@ const [selectedResume2,
   useEffect(() => {
 
   fetch(
-    "http://localhost:5000/history"
+    "https://resume-analyzer-9300.onrender.com"
   )
     .then((res) =>
       res.json()
@@ -54,7 +54,7 @@ formData.append(
 );
 
 const response = await fetch(
-  "http://localhost:5000/analyze",
+  "https://resume-analyzer-9300.onrender.com",
   {
     method: "POST",
     body: formData,
@@ -67,7 +67,7 @@ const data =
   setFileName(file.name);
   const historyResponse =
   await fetch(
-    "http://localhost:5000/history"
+    "https://resume-analyzer-9300.onrender.com"
   );
 
 const historyData =

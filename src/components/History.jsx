@@ -13,7 +13,7 @@ function History({
     try {
 
       await fetch(
-        `http://localhost:5000/history/${id}`,
+        `https://resume-analyzer-9300.onrender.com/history/${id}`,
         {
           method: "DELETE",
         }
