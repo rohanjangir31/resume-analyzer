@@ -1,4 +1,4 @@
-import Comparison from "./components/Comparison";
+import Comparison from "./components/comparison";
 import History from "./components/History";
 import ResumePreview from "./components/ResumePreview";
 import AnalysisCard from "./components/AnalysisCard";
