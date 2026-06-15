@@ -87,17 +87,17 @@ setIsLoading(false);
     <div className="min-h-screen bg-linear-to-br from-black via-gray-900 to-gray-800 text-white flex flex-col">
       
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-6 py-24">
+      <section className="flex flex-col items-center justify-center text-center px-4 md:px-6 py-16 md:py-24">
         <h1 className="text-5xl md:text-7xl font-bold leading-tight">
           AI Resume Analyzer
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl">
+        <p className="mt-6 text-base md:text-xl text-gray-300 max-w-2xl px-2">
           Upload your resume and get instant ATS score analysis,
           skill insights, and AI-powered improvement suggestions.
         </p>
 
-        <label className="mt-10 px-8 py-4 bg-blue-600 hover:bg-blue-700 transition rounded-2xl text-lg font-semibold shadow-lg cursor-pointer">
+        <label className="mt-10 w-full max-w-xs md:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 transition rounded-2xl text-lg font-semibold shadow-lg cursor-pointer">
 
   Upload Resume
 

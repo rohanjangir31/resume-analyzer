@@ -30,9 +30,9 @@ function History({
 
   };
   return (
-    <div className="px-8 md:px-20 py-10">
+    <div className="px-4 md:px-20 py-10">
 
-      <h2 className="text-4xl font-bold mb-8">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">
         Previous Analyses
       </h2>
       <input
@@ -46,6 +46,11 @@ function History({
 />
 
       <div className="space-y-6">
+        {history.length === 0 && (
+    <p className="text-gray-400 text-center">
+      No resumes analyzed yet.
+    </p>
+  )}
 
       {history
   .filter((item) =>
@@ -62,30 +67,32 @@ function History({
             className="bg-gray-900/70 border border-gray-700 rounded-2xl p-6 shadow-lg"
           >
 
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col gap-3">
 
-              <h3 className="text-xl font-bold">
-                {item.resumeName}
-              </h3>
+              <h3 className="text-xl font-bold break-words w-full">
+  {item.resumeName}
+</h3>
 
-              <span className="text-green-400 font-bold text-lg">
-                {item.score}%
-              </span>
+              <div className="flex items-center gap-2">
+  <span className="text-green-400 font-bold text-lg">
+    {item.score}%
+  </span>
+</div>
               <button
   onClick={() =>
     handleDelete(item._id)
   }
-  className="mt-4 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg"
+ className="bg-red-600 px-3 py-2 rounded-lg w-full sm:w-auto"
 >
   Delete
 </button>
-<div className="flex gap-2 mt-3">
+<div className="flex flex-wrap gap-2 mt-3">
 
   <button
     onClick={() =>
       setSelectedResume1(item)
     }
-    className="bg-blue-600 px-3 py-2 rounded-lg"
+   className="bg-blue-600 px-3 py-2 rounded-lg w-full sm:w-auto"
   >
     Resume 1
   </button>
@@ -94,7 +101,7 @@ function History({
     onClick={() =>
       setSelectedResume2(item)
     }
-    className="bg-green-600 px-3 py-2 rounded-lg"
+    className="bg-green-600 px-3 py-2 rounded-lg w-full sm:w-auto"
   >
     Resume 2
   </button>

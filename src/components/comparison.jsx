@@ -19,9 +19,9 @@ function Comparison({
 
   return (
 
-    <div className="bg-gray-900 border border-gray-700 rounded-2xl p-6 mt-10">
+   <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 md:p-6 mt-10 mx-4 md:mx-20">
 
-      <h2 className="text-3xl font-bold mb-6">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6">
         Resume Comparison
       </h2>
 
